@@ -36,7 +36,6 @@ curl -X POST http://localhost:8080/jobs \
 - **Scalability**: Asynchronous processing ensures non-blocking job execution. The architecture supports optimized database queries and high throughput.
 
 ### Scaling Strategy
-**For 10K Users + 6K Requests/Min:**
 - **Horizontal Scaling**: The application can be modified to run multiple instances behind a load balancer (e.g., AWS Elastic Load Balancer or NGINX). Docker and Kubernetes (e.g., AWS EKS) can be used for orchestration and scaling based on traffic demands.
 - **Database**: PostgreSQL can be employed for production with HikariCP for efficient connection pooling.
 - **Caching**: Redis can be used for caching frequently accessed data like job metadata, significantly reducing database load.
