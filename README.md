@@ -28,12 +28,12 @@ curl -X POST http://localhost:8080/jobs \
 ```
 
 ### Key Features
-- ✅ **Job Scheduling**: The microservice uses Spring's `@Scheduled` annotation to enable real scheduling, dynamically calculating nextRun after each execution. This supports flexible intervals like DAILY, WEEKLY, MONTHLY, and custom CRON expressions.
-- ✅ **Required APIs**: `GET /jobs`, `GET /jobs/:id`, and `POST /jobs` for job management and creation with validated inputs.
-- ✅ **Database**: The microservice employs Spring Data JPA for persistence, supporting H2 (demo) or PostgreSQL (production). Each job contains fields like `id`, `name`, `description`, `scheduleType`, `lastRun`, `nextRun`, and `status`.
-- ✅ **Dummy Jobs**: Simulated tasks such as Email Notifications, Data Processing, and Report Generation, which can be replaced with real implementations.
-- ✅ **SOLID Principles**: Modularized design with single responsibility and dependency injection for maintainability and extensibility.
-- ✅ **Scalability**: Asynchronous processing ensures non-blocking job execution. The architecture supports optimized database queries and high throughput.
+- **Job Scheduling**: The microservice uses Spring's `@Scheduled` annotation to enable real scheduling, dynamically calculating nextRun after each execution. This supports flexible intervals like DAILY, WEEKLY, MONTHLY, and custom CRON expressions.
+- **Required APIs**: `GET /jobs`, `GET /jobs/:id`, and `POST /jobs` for job management and creation with validated inputs.
+- **Database**: The microservice employs Spring Data JPA for persistence, supporting H2 (demo) or PostgreSQL (production). Each job contains fields like `id`, `name`, `description`, `scheduleType`, `lastRun`, `nextRun`, and `status`.
+- **Dummy Jobs**: Simulated tasks such as Email Notifications, Data Processing, and Report Generation, which can be replaced with real implementations.
+- **SOLID Principles**: Modularized design with single responsibility and dependency injection for maintainability and extensibility.
+- **Scalability**: Asynchronous processing ensures non-blocking job execution. The architecture supports optimized database queries and high throughput.
 
 ### Scaling Strategy
 **For 10K Users + 6K Requests/Min:**
